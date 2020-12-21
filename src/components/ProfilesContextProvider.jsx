@@ -13,12 +13,12 @@ function ProfilesReducer(state, action) {
 
   switch (action.type) {
     case 'ascending':
-      profiles = [...state.profiles];
+      profiles = state.mutatedProfiles ? [...state.mutatedProfiles] : [...state.profiles];
       profiles.sort((profileA, profileB) => (profileA.name > profileB.name ? 1 : -1));
       return { ...state, mutatedProfiles: profiles };
 
     case 'descending':
-      profiles = [...state.profiles];
+      profiles = state.mutatedProfiles ? [...state.mutatedProfiles] : [...state.profiles];
       profiles.sort((profileA, profileB) => (profileA.name < profileB.name ? 1 : -1));
       return { ...state, mutatedProfiles: profiles };
 
