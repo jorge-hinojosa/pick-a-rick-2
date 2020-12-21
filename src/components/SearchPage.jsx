@@ -25,7 +25,7 @@ class SearchPage extends React.Component {
   };
 
   render() {
-    const { profiles = [], loading = true, mutatedProfiles } = this.context;
+    const { profiles = [], loading = true, error = '', mutatedProfiles } = this.context;
 
     const PROFILES = mutatedProfiles || profiles;
     const FILTER_SORT_APPLIED = mutatedProfiles;
@@ -53,6 +53,12 @@ class SearchPage extends React.Component {
               </MinimalButton>
             </div>
           </Styled.ButtonsContainer>
+
+          {error && (
+            <Styled.ErrorText>
+              <p as="h1">{error}</p>
+            </Styled.ErrorText>
+          )}
 
           <SearchGrid profiles={PROFILES} loading={loading} />
         </main>

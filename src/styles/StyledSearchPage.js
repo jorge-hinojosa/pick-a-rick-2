@@ -16,3 +16,15 @@ export const ResetFilterButton = styled.button(() => ({
   cursor: 'pointer',
   outline: 'none',
 }));
+
+export const ErrorText = styled.div(() => ({
+  width: '100%',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+
+  p: {
+    fontSize: 22,
+    fontWeight: 'bold',
+  },
+}));

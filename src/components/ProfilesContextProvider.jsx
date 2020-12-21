@@ -33,7 +33,7 @@ function ProfilesReducer(state, action) {
       return {
         loading: false,
         profiles: [],
-        error: 'Something went wrong!',
+        error: 'Something went wrong! Check back in a bit and we should be back 😅',
       };
 
     case 'FILTER_RICKS':
