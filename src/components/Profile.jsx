@@ -10,7 +10,7 @@ const Profile = (props) => {
   const [redirect, setRedirect] = useState(false);
 
   useEffect(() => {
-    const rick = context.profiles.find((rick) => rick.id == props.match.params.id);
+    const rick = context.profiles.find((rick) => rick.id === Number(props.match.params.id));
     if (!rick) return setRedirect(true);
     setCurrentRick(rick);
   }, [context.profiles, props.match.params.id]);

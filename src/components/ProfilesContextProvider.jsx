@@ -9,7 +9,6 @@ export const ProfileContext = React.createContext({
 
 function ProfilesReducer(state, action) {
   let profiles;
-  console.log(action);
 
   switch (action.type) {
     case 'ascending':
